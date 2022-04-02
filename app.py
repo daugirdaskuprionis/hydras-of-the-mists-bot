@@ -1,7 +1,7 @@
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 from discord.ext import commands
-import discord, requests
+import discord, requests, os
 
 channel_id = 959440578121187429
 bot = commands.Bot(command_prefix="dog ")
