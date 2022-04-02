@@ -33,10 +33,10 @@ async def on_ready():
 
     scheduler = AsyncIOScheduler()
 
-    scheduler.add_job(lyssas_legions, CronTrigger(hour="20", minute="30", second="0")) 
-    scheduler.add_job(melandrus_matchup, CronTrigger(hour="23", minute="30", second="0")) 
     scheduler.add_job(grenths_game, CronTrigger(hour="17", minute="30", second="0")) 
-
+    scheduler.add_job(melandrus_matchup, CronTrigger(hour="20", minute="30", second="0"))
+    scheduler.add_job(lyssas_legions, CronTrigger(hour="23", minute="30", second="0"))  
+    
     scheduler.start()
 
 if __name__ == '__main__':
